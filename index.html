@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task-1</title>
+</head>
+
+<body>
+    <button onclick="showCookies()">Show cookies</button>
+
+<button onclick="clearOutputCookies()">Clear cookies</button>
+
+<div>
+  <h1 id="cookies"></h1>
+</div>
+</body>
+<script >
+  document.cookie = "name=HISHAM; SameSite=None; Secure";
+  document.cookie = "age=22; SameSite=None; Secure";
+
+function showCookies() {
+  const output = document.getElementById('cookies')
+  output.innerText =document.cookie
+}
+
+function clearOutputCookies() {
+  
+  const output = document.getElementById('cookies')
+  output.textContent = ''
+}
+
+</script>
+</html>
